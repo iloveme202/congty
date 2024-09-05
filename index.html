@@ -4,29 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Static Images</title>
+    <title>Company Website</title>
     <style>
         body {
             display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+        .header {
+            text-align: center;
+            margin: 50px 0;
+            font-size: 48px;
+            font-weight: bold;
+        }
+        .images {
+            display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 10px;
-            padding: 20px;
-            background-color: #f0f0f0;
+            gap: 20px;
+            margin-bottom: 50px;
         }
-        img {
+        .images img {
             max-width: 300px;
+            border-radius: 10px;
             border: 2px solid #ccc;
-            border-radius: 8px;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 18px;
+            background-color: #333;
+            color: #fff;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
         }
     </style>
 </head>
 <body>
-    <img src="download.jfif" alt="Image 1">
-    <img src="download (3).jfif" alt="Image 2">
-    <img src="download (1).jfif"  alt="Image 3">
-    <img src="download (2).jfif">
-    <img src="download (4).jfif">
-    <!-- Thêm nhiều ảnh tùy ý -->
+    <div class="header">Tên Công Ty Của Bạn</div>
+
+    <div class="images">
+        <img src="a1.jfif" alt="Image 1">
+        <img src="a2.jfif" alt="Image 2">
+        <img src="a3.jfif" alt="Image 3">
+		<img src="a4.jfif" alt="Image 4">
+		<img src="a5.jfif" alt="Image 5">
+        <!-- Thêm các ảnh khác nếu cần -->
+    </div>
+
+    <div class="footer">Địa chỉ công ty: Số nhà, Đường, Quận, Thành phố, Quốc gia</div>
 </body>
 </html>
