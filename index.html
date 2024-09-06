@@ -4,76 +4,78 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Company Website</title>
+    <title>Kaiyang</title>
     <style>
         body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f7f7f7;
-    color: #333;
-    min-height: 100vh; /* Đảm bảo body có chiều cao đủ để các phần tử cố định hiển thị đúng */
-}
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+            min-height: 100vh; /* Đảm bảo body có chiều cao đủ để các phần tử cố định hiển thị đúng */
+			 padding-bottom: 50px;
+		}
 
-.header {
-    text-align: center;
-    font-size: 48px;
-    font-weight: bold;
-    color: red; /* Màu chữ đỏ */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #f7f7f7; /* Để nền header không bị ảnh hưởng bởi nội dung bên dưới */
-    padding: 20px 0; /* Khoảng cách cho phần header */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Thêm bóng để tách biệt header */
-    z-index: 1000; /* Đảm bảo header luôn ở trên cùng */
-}
+        .header {
+            text-align: center;
+            font-size: 48px;
+            font-weight: bold;
+            color: red; /* Màu chữ đỏ */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #f7f7f7; /* Để nền header không bị ảnh hưởng bởi nội dung bên dưới */
+            padding: 20px 0; /* Khoảng cách cho phần header */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Thêm bóng để tách biệt header */
+            z-index: 1000; /* Đảm bảo header luôn ở trên cùng */
+        }
 
-.images {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 100px; /* Khoảng cách từ header */
-    margin-bottom: 50px;
-}
+        .images {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 100px; /* Khoảng cách từ header */
+            margin-bottom: 50px;
+        }
 
-.image-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-.images img {
-    width: 300px; /* Đặt chiều rộng cố định */
-    height: 200px; /* Đặt chiều cao cố định */
-    object-fit: cover; /* Giữ tỉ lệ và cắt ảnh nếu cần */
-    border-radius: 10px;
-    border: 2px solid #ccc;
-}
+        .images img {
+            width: 300px; /* Đặt chiều rộng cố định */
+            height: 200px; /* Đặt chiều cao cố định */
+            object-fit: cover; /* Giữ tỉ lệ và cắt ảnh nếu cần */
+            border-radius: 10px;
+            border: 2px solid #ccc;
+        }
 
-.price {
-    margin-top: 10px;
-    font-size: 18px;
-    color: #555;
-}
+        .price {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #555;
+        }
 
-.footer {
-    text-align: center;
-    padding: 20px;
-    font-size: 18px;
-    background-color: #333;
-    color: #fff;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-}
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 18px;
+            background-color: #333;
+            color: #fff;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            line-height: 1.6;
+        }
     </style>
 </head>
 <body>
@@ -81,50 +83,86 @@
 
     <div class="images">
         <div class="image-container">
-            <img src="basat.jfif" alt="Image 1">
+            <img src="bocap.jfif" alt="Image 1">
+            <div class="price">Giá: 250,000 VND</div>
+        </div>
+        <div class="image-container">
+            <img src="chimboica.jfif" alt="Image 2">
+            <div class="price">Giá: 120,000 VND</div>
+        </div>
+        <div class="image-container">
+            <img src="cho.jfif" alt="Image 3">
+            <div class="price">Giá: 111,000 VND</div>
+        </div>
+        <div class="image-container">
+            <img src="ocsen.jfif" alt="Image 4">
+            <div class="price">Giá: 90,000 VND</div>
+        </div>
+        <div class="image-container">
+            <img src="lonrung.jfif" alt="Image 5">
             <div class="price">Giá: 500,000 VND</div>
         </div>
         <div class="image-container">
-            <img src="dongcap.jfif" alt="Image 2">
-            <div class="price">Giá: 750,000 VND</div>
+            <img src="rong.jfif" alt="Image 6">
+            <div class="price">Giá: 390,000 VND</div>
         </div>
         <div class="image-container">
-            <img src="dongchay.jfif" alt="Image 3">
-            <div class="price">Giá: 1,000,000 VND</div>
-        </div>
-		
-		<div class="image-container">
-            <img src="dongdo.jfif" alt="Image 1">
-            <div class="price">Giá: 500,000 VND</div>
+            <img src="chau.jfif" alt="Image 7">
+            <div class="price">Giá: 50,000 VND</div>
         </div>
         <div class="image-container">
-            <img src="giaycaton.jfif" alt="Image 2">
-            <div class="price">Giá: 750,000 VND</div>
+            <img src="choi.jfif" alt="Image 8">
+            <div class="price">Giá: 50,000 VND</div>
         </div>
         <div class="image-container">
-            <img src="inox316.jfif" alt="Image 3">
-            <div class="price">Giá: 1,000,000 VND</div>
-        </div>
-		
-		<div class="image-container">
-            <img src="linhkien.jfif" alt="Image 1">
-            <div class="price">Giá: 500,000 VND</div>
+            <img src="ghe.jfif" alt="Image 9">
+            <div class="price">Giá: 1,500,000 VND</div>
         </div>
         <div class="image-container">
-            <img src="nhuaabs.jfif" alt="Image 2">
-            <div class="price">Giá: 750,000 VND</div>
+            <img src="dongcap.jfif" alt="Image 10">
+            <div class="price">Giá: 120,000 - 200,000 VND</div>
         </div>
         <div class="image-container">
-            <img src="satriset.jfif" alt="Image 3">
-            <div class="price">Giá: 1,000,000 VND</div>
+            <img src="basat.jfif" alt="Image 11">
+            <div class="price">Giá: 6,500 VND</div>
         </div>
-		<div class="image-container">
-            <img src="satvun.jfif" alt="Image 3">
-            <div class="price">Giá: 1,000,000 VND</div>
+        <div class="image-container">
+            <img src="dongchay.jfif" alt="Image 12">
+            <div class="price">Giá: 95,000 - 145,000 VND</div>
         </div>
-        <!-- Thêm các ảnh và giá tiền khác nếu cần -->
+        <div class="image-container">
+            <img src="dongdo.jfif" alt="Image 13">
+            <div class="price">Giá: 110,000 - 180,000 VND</div>
+        </div>
+        <div class="image-container">
+            <img src="giaycaton.jfif" alt="Image 14">
+            <div class="price">Giá: 5,000 - 10,000 VND</div>
+        </div>
+        <div class="image-container">
+            <img src="inox316.jfif" alt="Image 15">
+            <div class="price">Giá: 30,000 - 45,000 VND</div>
+        </div>
+        <div class="image-container">
+            <img src="linhkien.jfif" alt="Image 16">
+            <div class="price">Giá: 300,000 - 360,000 VND</div>
+        </div>
+        <div class="image-container">
+            <img src="nhuaabs.jfif" alt="Image 17">
+            <div class="price">Giá: 20,000 - 40,000 VND</div>
+        </div>
+        <div class="image-container">
+            <img src="satriset.jfif" alt="Image 18">
+            <div class="price">Giá: 8,000 - 10,000 VND</div>
+        </div>
+        <div class="image-container">
+            <img src="satvun.jfif" alt="Image 19">
+            <div class="price">Giá: 8,000 - 10,000 VND</div>
+        </div>
     </div>
 
-    <div class="footer">Địa chỉ công ty: 11A Hồng Hà, Phường 2, Quận Tân Bình, TP: Hồ Chí Minh</div>
+    <div class="footer">
+        <div>Địa chỉ công ty: 11A Hồng Hà, Phường 2, Quận Tân Bình, TP: Hồ Chí Minh</div>
+        <div>Liên hệ: Số điện thoại: 0942 844 642 | Email: dangcapvippro1986@gmail.com</div>
+    </div>
 </body>
 </html>
