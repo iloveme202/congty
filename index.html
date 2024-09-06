@@ -75,7 +75,21 @@
             bottom: 0;
             left: 0;
             line-height: 1.6;
+			word-wrap: break-word; /* Đảm bảo ngắt dòng nếu chuỗi quá dài */
+			max-width: 100%; 
         }
+		@media (max-width: 768px) {
+			.header {
+					font-size: 36px; /* Giảm kích thước chữ của header trên màn hình nhỏ */
+					padding: 15px 0; /* Điều chỉnh khoảng cách */
+			}
+
+			.footer {
+					font-size: 14px; /* Giảm kích thước chữ trong footer để phù hợp với màn hình nhỏ */
+					padding: 15px; /* Điều chỉnh padding cho footer */
+					line-height: 1.6; /* Tăng line-height để đọc dễ hơn */
+			}
+		}
     </style>
 </head>
 <body>
