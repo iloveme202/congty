@@ -109,6 +109,39 @@
                 line-height: 1.6;
             }
         }
+
+	    //hoa rơi
+#cherry-blossom-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Không cho phép tương tác với hiệu ứng */
+    overflow: hidden; /* Ẩn phần hình ảnh vượt ra ngoài container */
+}
+
+.cherry-blossom {
+    position: absolute;
+    width: 50px; /* Kích thước hoa, có thể điều chỉnh */
+    height: 50px;
+    background-image: url('a.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+	    
     </style>
 </head>
 <body>
@@ -268,7 +301,10 @@
         <div>Phone: 0942 844 642 | Email: dangcapvippro1986@gmail.com</div>
         <div>Address: 11A Hồng Hà, Phường 2, Quận Tân Bình, Hồ Chí Minh</div>
     </div>
-
+	
+//hoa rơi
+<div id="cherry-blossom-container"></div>
+	
     <!-- JavaScript để thay đổi dòng chữ khi click vào ảnh -->
     <script>
         // Lấy tất cả các phần tử hình ảnh
@@ -283,6 +319,30 @@
                 container.classList.add('selected');
             });
         });
+	// hoa rơi
+function createCherryBlossom() {
+    const container = document.getElementById('cherry-blossom-container');
+    const blossom = document.createElement('div');
+    blossom.classList.add('cherry-blossom');
+    
+    // Đặt vị trí ngẫu nhiên cho hoa anh đào khi bắt đầu
+    blossom.style.left = Math.random() * 100 + 'vw';
+    blossom.style.animationDuration = (Math.random() * 5 + 10) + 's'; // Thời gian rơi ngẫu nhiên từ 2 đến 5 giây
+    blossom.style.opacity = Math.random(); // Độ trong suốt ngẫu nhiên
+    
+    container.appendChild(blossom);
+
+    // Xóa phần tử sau khi hoạt ảnh kết thúc
+    blossom.addEventListener('animationend', () => {
+        blossom.remove();
+    });
+}
+
+// Tạo hoa anh đào mới mỗi 300 mili giây
+setInterval(createCherryBlossom, 1000);
+
+	    
+	    
     </script>
 </body>
 </html>
